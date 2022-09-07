@@ -18,9 +18,11 @@ app.use(cors());
 
 
 
-const url ='mongodb://localhost/SfqDBex';
+const url ='mongodb://localhost/Plaid_Demo';
 mongoose.connect(url, { useNewUrlParser: true }) 
 const con = mongoose.connection 
+
+
 
 con.on('open', function () {
     console.log("connected...")

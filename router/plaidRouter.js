@@ -7,9 +7,13 @@ const { createPublicToken,
     createProcessorToken,
     accountBalance,
     institutionsGetRequest,
-    authGetRequest } = require("../contoller/plaidApiContoller")
+    authGetRequest,
+    ItemGetRequest,
+    InstitutionsGetByIdRequest,
+    ItemRemoveRequest,
+    } = require("../contoller/plaidApiContoller")
 
-
+   
 
 routerPlaid.post('/createPublicToken', createPublicToken)
 routerPlaid.post('/createAccessToken', createAccessToken)
@@ -18,6 +22,9 @@ routerPlaid.post('/createProcessorToken', createProcessorToken)
 routerPlaid.post('/accountBalance',accountBalance)
 routerPlaid.post('/institutionsGetRequest',institutionsGetRequest)
 routerPlaid.post('/authGetRequest',authGetRequest)
+routerPlaid.post('/ItemGetRequest',ItemGetRequest)
+routerPlaid.post('/InstitutionsGetByIdRequest',InstitutionsGetByIdRequest)
+routerPlaid.post('/ItemRemoveRequest',ItemRemoveRequest)
 
 
 

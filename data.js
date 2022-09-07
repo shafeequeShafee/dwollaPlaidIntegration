@@ -416,7 +416,7 @@
         "products": [
             "assets",
             "auth",
-            "balance",.
+            "balance",
             "transactions",
             "identity"
         ],

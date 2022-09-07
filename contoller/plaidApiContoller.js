@@ -184,6 +184,63 @@ const  authGetRequest = async(req, res)=> {
 
 
 
+const  ItemGetRequest = async(req, res)=> {
+  const tokens = await Token.findOne({ "mobileNumber": req.body.mobileNumber })
+  const request = {
+    access_token: tokens.accessTokens
+  };
+
+    try {
+      const response = await client.itemGet(request);
+      const item = response.data.item;
+      const status = response.data.status;
+      res.send(`item:${item}, status:${status}`)
+      console.log(item,status)
+    } 
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+}
+
+const  InstitutionsGetByIdRequest = async(req, res)=> {
+  const request= {
+    institution_id: req.body.institution_id,
+    country_codes:req.body.country_codes
+  };
+    try {
+      const response = await client.institutionsGetById(request);
+      const institution = response.data.institution;
+      res.send(`institution:${institution}`)
+      console.log(institution)
+    } 
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+}
+
+
+const  ItemRemoveRequest = async(req, res)=> {
+  const tokens = await Token.findOne({ "mobileNumber": req.body.mobileNumber })
+  const request = {
+    access_token: tokens.accessTokens
+  };
+
+    try {
+      
+      const response = await client.itemRemove(request);
+        // The Item was removed, access_token is now invalid
+      res.send(response)
+    } 
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+}
+
+
+
 
 module.exports = {
   createPublicToken,
@@ -192,5 +249,8 @@ module.exports = {
   createProcessorToken,
   accountBalance,
   institutionsGetRequest,
-  authGetRequest
+  authGetRequest,
+  ItemGetRequest,
+  InstitutionsGetByIdRequest,
+  ItemRemoveRequest
 }
