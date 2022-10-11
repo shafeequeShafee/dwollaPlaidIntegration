@@ -2,6 +2,7 @@ const { Configuration, PlaidApi, PlaidEnvironments, ProcessorTokenCreateRequest 
 
 const PLAID_CLIENT_ID = '62a30605787ab8001324575d';
 const PLAID_SECRET = 'c8eecc45cd764363a91f257aff28bf';
+// const PLAID_SECRET = 'e2873321474c769e405707a45b5b61';
 const PLAID_ENV = process.env.PLAID_ENV || 'sandbox';
 
 
@@ -40,6 +41,7 @@ const createPublicToken = async (req, res) => {
     token.publicTokens = publicToken
     token.save()
     res.send(`publicToken:${publicToken}`)
+    console.log("publicToken",publicTokenResponse )
 
   }
   catch (error) {
@@ -65,6 +67,7 @@ const createAccessToken = async (req, res) => {
     tokens.accessTokens = accessToken
     await tokens.save()
     res.send(`aceesToken: ${accessToken}`)
+    console.log("accessToken",exchangeTokenResponse)
   }
   catch (error) {
     console.log(error)
@@ -86,6 +89,7 @@ const choosingAccountIdforProcessorToken = async (req, res) => {
     account.accounts = accounts
     account.save()
     res.send(accounts)
+    
   }
   catch (error) {
     console.log(error)
@@ -113,6 +117,7 @@ const createProcessorToken = async (req, res) => {
     tokens.save()
 
     res.send(`processorToken:${processorToken}`)
+    console.log("processorToken", processorTokenResponse)
   }
   catch (error) {
     console.log(error)
