@@ -1,8 +1,8 @@
 const { Configuration, PlaidApi, PlaidEnvironments, ProcessorTokenCreateRequest } = require('plaid');
 
-const PLAID_CLIENT_ID = '62a30605787ab8001324575d';
-const PLAID_SECRET = 'c8eecc45cd764363a91f257aff28bf';
-// const PLAID_SECRET = 'e2873321474c769e405707a45b5b61';
+const PLAID_CLIENT_ID = '';
+const PLAID_SECRET = '';
+
 const PLAID_ENV = process.env.PLAID_ENV || 'sandbox';
 
 
