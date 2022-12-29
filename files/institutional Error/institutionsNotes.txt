@@ -1,0 +1,71 @@
+#)oath:true aaya case il njammakku  , ethekillum oru product pass cheythal thennae public Token kittum.
+
+#) case 1 
+{
+        "country_codes": [
+            "US"
+        ],
+        "institution_id": "ins_130347",
+        "name": "Chiphone Credit Union",
+        "oauth": false,
+        "products": [
+            "assets",
+            "balance",
+            "transactions"
+        ],
+        "routing_numbers": []
+    },
+
+ey case il 3 product ollu & oath: false aanu , but njammakku ethekillum oru product pass
+  cheyth public Token kittum.
+
+#)case 2 A
+{
+        "country_codes": [
+            "US"
+        ],
+        "institution_id": "ins_130958",
+        "name": "Bridge",
+        "oauth": false,
+        "products": [
+            "assets",
+            "auth",
+            "balance",
+            "transactions",
+            "identity"
+        ],
+        "routing_numbers": [
+            "051402372"
+        ]
+    },
+ey case il 5 product ollu & oath: false aanu , but njammakku pala combinationsum pinnae
+   single product pass cheythittum publicToken kittunilla.
+  
+
+#)case 2 b
+{
+        "country_codes": [
+            "US"
+        ],
+        "institution_id": "ins_130358",
+        "name": "Equitable Bank",
+        "oauth": false,
+        "products": [
+            "assets",
+            "auth",
+            "balance",
+            "transactions",
+            "identity"
+        ],
+        "routing_numbers": [
+            "011401533",
+            "304971932"
+        ]
+    },
+
+ey case il 5 product ollu & oath: false aanu , but njammakku ellam pass cheythappoyum , 
+    pinnae individual product pass cheythappoyum, pinnae identity oppam kootti 3 product 
+    pass cheythappozhum public Token kitti. athupollae "auth"  oppam kootti 3 product 
+    pass cheythappozhum public Token kitti.
+    athupollae "assets","auth","identity" eth 3 pass  pass cheythappozhum public Token kitti.
+ 

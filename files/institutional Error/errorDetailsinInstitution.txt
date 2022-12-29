@@ -1,0 +1,391 @@
+https://plaid.com/docs/errors/item/#common-causes
+1)
+########################################################################
+
+{
+        "country_codes": [
+            "US"
+        ],
+        "institution_id": "ins_132109",
+        "name": "Grant County Bank - Ulysses, KS",
+        "oauth": true,
+        "products": [
+            "assets",
+            "auth",
+            "balance",
+            "transactions",
+            "identity"
+        ],
+        "routing_numbers": [
+            "101109648"
+        ]
+    }
+
+Status:
+#############
+publicToken: Created
+acessToken: Created
+processorToken:Created
+
+but : account types - 2 muthal preshnam annu
+
+[
+    {
+        "account_id": "pVgEGpLAPliPNZKb3AqoUjlNNPdmlKcKJM3Z5",
+        "balances": {
+            "available": 100,
+            "current": 110,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "0000",
+        "name": "Plaid Checking",
+        "official_name": "Plaid Gold Standard 0% Interest Checking",
+        "subtype": "checking",
+        "type": "depository"
+    },
+    {
+        "account_id": "oVb8ANXyJWiRMnqLBmlpIK8nnRp18BuKpe8dg",
+        "balances": {
+            "available": 200,
+            "current": 210,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "1111",
+        "name": "Plaid Saving",
+        "official_name": "Plaid Silver Standard 0.1% Interest Saving",
+        "subtype": "savings",
+        "type": "depository"
+    },
+    {
+        "account_id": "gVpQ1ZA7PNiRgQ5G4AvjIwvkkad6vZCMLpqxW",
+        "balances": {
+            "available": null,
+            "current": 1000,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "2222",
+        "name": "Plaid CD",
+        "official_name": "Plaid Bronze Standard 0.2% Interest CD",
+        "subtype": "cd",
+        "type": "depository"
+    },
+    {
+        "account_id": "8G6azVwZDvtWabKZG947ha9DD7GW9KsrZojbG",
+        "balances": {
+            "available": null,
+            "current": 410,
+            "iso_currency_code": "USD",
+            "limit": 2000,
+            "unofficial_currency_code": null
+        },
+        "mask": "3333",
+        "name": "Plaid Credit Card",
+        "official_name": "Plaid Diamond 12.5% APR Interest Credit Card",
+        "subtype": "credit card",
+        "type": "credit"
+    },
+    {
+        "account_id": "E47oZEN3wnFqp3DJNAyBTX1dd39e1giEgnJqP",
+        "balances": {
+            "available": 43200,
+            "current": 43200,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "4444",
+        "name": "Plaid Money Market",
+        "official_name": "Plaid Platinum Standard 1.85% Interest Money Market",
+        "subtype": "money market",
+        "type": "depository"
+    },
+    {
+        "account_id": "WGJlrg8kLpt13yoJAQRZTR7aaxg57wu4PzKkK",
+        "balances": {
+            "available": null,
+            "current": 320.76,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "5555",
+        "name": "Plaid IRA",
+        "official_name": null,
+        "subtype": "ira",
+        "type": "investment"
+    },
+    {
+        "account_id": "A31MjbQKx4Sz8DNE7J6xCMezzo56eaco4NEQA",
+        "balances": {
+            "available": null,
+            "current": 23631.9805,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "6666",
+        "name": "Plaid 401k",
+        "official_name": null,
+        "subtype": "401k",
+        "type": "investment"
+    },
+    {
+        "account_id": "GPw81B3dyRfrjvLaQlZnI9ojjEZmoytnGgy53",
+        "balances": {
+            "available": null,
+            "current": 65262,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "7777",
+        "name": "Plaid Student Loan",
+        "official_name": null,
+        "subtype": "student",
+        "type": "loan"
+    },
+    {
+        "account_id": "nV4gW1pAMbi5VelWz4gLUVlNN5Myl7uG3qwjQ",
+        "balances": {
+            "available": null,
+            "current": 56302.06,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "8888",
+        "name": "Plaid Mortgage",
+        "official_name": null,
+        "subtype": "mortgage",
+        "type": "loan"
+    }
+]
+
+Error:
+#############
+# https://plaid.com/docs/errors/item/#no_auth_accounts-or-no-depository-accounts
+
+
+error_code: 'NO_AUTH_ACCOUNTS',
+error_message: 'There are no valid checking or savings account(s) associated with this Item. 
+              See https://plaid.com/docs/api/#item-errors for more information.',
+error_type: 'ITEM_ERROR',
+request_id: 'uddfpaL6j1KKeLp',
+suggested_action: null
+
+2)
+##########################################################################
+"institution_id": "ins_13"
+
+
+Status:
+#############
+publicToken: Created
+acessToken: Created
+processorToken: false
+
+account types - 0 muthal onnum create aavunilla
+
+[
+    {
+        "account_id": "rnRJVlvZ71UGR7GjAezAUWL7N5X6RBIaPN34k",
+        "balances": {
+            "available": 100,
+            "current": 110,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "0000",
+        "name": "Plaid Checking",
+        "official_name": "Plaid Gold Standard 0% Interest Checking",
+        "subtype": "checking",
+        "type": "depository"
+    },
+    {
+        "account_id": "zXMmqdvblVUMeXMVmqPmIZNg3WKkGDFw764rd",
+        "balances": {
+            "available": 200,
+            "current": 210,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "1111",
+        "name": "Plaid Saving",
+        "official_name": "Plaid Silver Standard 0.1% Interest Saving",
+        "subtype": "savings",
+        "type": "depository"
+    },
+    {
+        "account_id": "BblRxzJmLAILn4LMrBPrharGZVgK8QUAWVDE5",
+        "balances": {
+            "available": null,
+            "current": 1000,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "2222",
+        "name": "Plaid CD",
+        "official_name": "Plaid Bronze Standard 0.2% Interest CD",
+        "subtype": "cd",
+        "type": "depository"
+    },
+    {
+        "account_id": "3ABKgeMNnoSNA8NX6Bk6HnKPNmkM1RcMr5d6l",
+        "balances": {
+            "available": null,
+            "current": 410,
+            "iso_currency_code": "USD",
+            "limit": 2000,
+            "unofficial_currency_code": null
+        },
+        "mask": "3333",
+        "name": "Plaid Credit Card",
+        "official_name": "Plaid Diamond 12.5% APR Interest Credit Card",
+        "subtype": "credit card",
+        "type": "credit"
+    },
+    {
+        "account_id": "xnBrV3vJDyUX8mXJBw4BUXjmrgZV4vuJ7Ldja",
+        "balances": {
+            "available": 43200,
+            "current": 43200,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "4444",
+        "name": "Plaid Money Market",
+        "official_name": "Plaid Platinum Standard 1.85% Interest Money Market",
+        "subtype": "money market",
+        "type": "depository"
+    },
+    {
+        "account_id": "d6dwVP1rMBIkZvkn7jz7HgeyJ5BnQ7cDMrLKj",
+        "balances": {
+            "available": null,
+            "current": 320.76,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "5555",
+        "name": "Plaid IRA",
+        "official_name": null,
+        "subtype": "ira",
+        "type": "investment"
+    },
+    {
+        "account_id": "abdeVaQl6KIK65KWRmqRUNE8wjknMgC1aVAw9",
+        "balances": {
+            "available": null,
+            "current": 23631.9805,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "6666",
+        "name": "Plaid 401k",
+        "official_name": null,
+        "subtype": "401k",
+        "type": "investment"
+    },
+    {
+        "account_id": "45vr8Q1PnDH5D85ZyjRyIM37LdX15oHnr4jz1",
+        "balances": {
+            "available": null,
+            "current": 65262,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "7777",
+        "name": "Plaid Student Loan",
+        "official_name": null,
+        "subtype": "student",
+        "type": "loan"
+    },
+    {
+        "account_id": "NDwR1QJ986Twyowx8ZD8UyxDRPXKjWinjkPdv",
+        "balances": {
+            "available": null,
+            "current": 56302.06,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "8888",
+        "name": "Plaid Mortgage",
+        "official_name": null,
+        "subtype": "mortgage",
+        "type": "loan"
+    }
+]
+
+Error:
+#############
+error_code: 'PRODUCTS_NOT_SUPPORTED',
+error_message: 'the following products are not supported by this institution: ["auth"]',
+error_type: 'ITEM_ERROR',
+request_id: 'Qdkg2iqRSQcKREQ',
+suggested_action: null
+
+
+
+3)
+############################################################
+
+{
+        "country_codes": [
+            "US"
+        ],
+        "institution_id": "ins_129756",
+        "name": "Shell Western States Credit Union",
+        "oauth": false,
+        "products": [
+            "assets",
+            "balance",
+            "transactions"
+        ],
+        "routing_numbers": []
+    },
+
+Status:
+#############
+publicToken: Created
+acessToken: Created
+processorToken: false
+
+account types - 0 muthal onnum create aavunilla
+{
+        "account_id": "RD9ZvveqnyCvaMMyZbWghk7jDg8PakUJvdpoq",
+        "balances": {
+            "available": 100,
+            "current": 110,
+            "iso_currency_code": "USD",
+            "limit": null,
+            "unofficial_currency_code": null
+        },
+        "mask": "0000",
+        "name": "Plaid Checking",
+        "official_name": "Plaid Gold Standard 0% Interest Checking",
+        "subtype": "checking",
+        "type": "depository"
+    },
+
+
+Error:
+#############
+ error_code: 'PRODUCTS_NOT_SUPPORTED',
+ error_message: 'the following products are not supported by this institution: ["auth"]',
+ error_type: 'ITEM_ERROR',
+ request_id: 'h22dlJJL5VC4kAB',
+ suggested_action: null

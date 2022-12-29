@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs40\lang9 Research On MongoDB Notification when the Server is Down\ulnone\fs28\par
+
+\pard\sa200\sl276\slmult1 Alert: \b0\fs24 Notification sent by Atlas when your database operations or server usage reach thresholds that affect cluster performance.Atlas issues alerts for the database and server conditions configured in your alert settings.Atlas continues sending notifications at regular intervals until the condition resolves or you delete or disable the alert.\par
+\b\fs28 Host Alerts: \b0\fs24 The conditions in this section apply if you select Host as the alert target when configuring the alert. You can apply the condition to all hosts or to specific type of host, such as primaries or config servers.\par
+config servers: {{\field{\*\fldinst{HYPERLINK https://www.mongodb.com/docs/master/core/sharded-cluster-config-servers/#config-servers }}{\fldrslt{https://www.mongodb.com/docs/master/core/sharded-cluster-config-servers/#config-servers\ul0\cf0}}}}\f0\fs24\par
+primaries: {{\field{\*\fldinst{HYPERLINK https://www.mongodb.com/docs/atlas/reference/glossary/#std-term-primary }}{\fldrslt{https://www.mongodb.com/docs/atlas/reference/glossary/#std-term-primary\ul0\cf0}}}}\f0\fs24\par
+for more details about Review Alert Conditions: {{\field{\*\fldinst{HYPERLINK https://www.mongodb.com/docs/atlas/reference/alert-conditions/#review-alert-conditions }}{\fldrslt{https://www.mongodb.com/docs/atlas/reference/alert-conditions/#review-alert-conditions\ul0\cf0}}}}\f0\fs24\par
+\b\fs36 Host Alert Conditions:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Host is Down :\b0\fs24 Sends an alert if Atlas is unable to reach a host for several minutes.\b\fs36\par
+
+\pard\sa200\sl276\slmult1\b0\fs24             This alert is generally triggered by one of the following conditions:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li1080\sa200\sl276\slmult1 The cluster has experienced a failure and is being auto-healed.\par
+{\pntext\f1\'B7\tab}The cluster could not be reached because of a network issue\par
+
+\pard\sa200\sl276\slmult1 for more details : {{\field{\*\fldinst{HYPERLINK https://www.mongodb.com/docs/atlas/reference/alert-conditions/#host-down }}{\fldrslt{https://www.mongodb.com/docs/atlas/reference/alert-conditions/#host-down\ul0\cf0}}}}\f0\fs24\par
+\b\fs36\par
+\fs28 Atlas Free Clusters: \fs36\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Logical Size is: \b0\fs24 Sends an alert if the total size of the data and indexes is outside the specified threshold.\b\fs36\par
+
+\pard\sa200\sl276\slmult1\b0\fs24             Applicable for Atlas Free Clusters Only\par
+\b\fs28 Memory : \b0\fs24 The following alert conditions measure memory for a MongoDB process, as collected from the MongoDB serverStatus command's mem document. You can view these metrics on the Atlas Memory and Non-Mapped Virtual Memory charts, accessed through cluster monitoring.\b\fs36\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Memory: Resident is : \b0\fs24 Sends an alert if the size of the resident memory meets the specified threshold. It is typical over time, on a dedicated database server, for the size of the resident memory to approach the amount of physical RAM on the box.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 Memory: Virtual is: \b0\fs24 Sends an alert if the size of virtual memory for the mongod process meets the specified threshold. You can use this alert to flag excessive memory outside of memory mapping.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 Memory: Computed is : \b0\fs24 Sends an alert if the size of virtual memory that is not accounted for by memory-mapping meets the specified threshold. If this number is very high (multiple gigabytes), it indicates that excessive memory is being used outside of memory mapping.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 System Memory: Used is : \b0\fs24 Sends an alert if system memory usage meets the specified threshold.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 System Memory: \b0\fs24 Max Used is : Sends an alert if the maximum system memory usage value meets the specified threshold.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 System Memory: \b0\fs24 Free is : Sends an alert if the amount of free system memory drops below the specified threshold.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 System Memory: \b0\fs24 Max Free is : Sends an alert if the maximum amount of free system memory drops below the specified threshold.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 System Memory: \b0\fs24 Available is : Sends an alert if the amount of available system memory drops below the specified threshold.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 System Memory: \b0\fs24 Max Available is : Sends an alert if the maximum amount of available system memory drops below the specified threshold.\b\fs36\par
+
+\pard\sa200\sl276\slmult1\fs28 DB Storage:\b0\fs24 The following alert conditions apply to database storage, as collected for a MongoDB process by the MongoDB dbStats command. \par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b\fs28 DB Storage is: \b0\fs24 Sends an alert if the allocated storage meets the specified threshold. This alert condition can be viewed on a host's DB Storage chart, accessed through cluster monitoring.\b\fs36\par
+{\pntext\f1\'B7\tab}\fs28 DB Data Size is: \b0\fs24 Sends an alert if approximate size of all documents (and their paddings) meets the specified threshold.\b\fs36\par
+
+\pard\sa200\sl276\slmult1\fs28 Restarts\fs36\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\fs28 Restarts in Last Hour is:\b0\fs24 Sends an alert if the number of times a host restarts within the previous hour exceeds the specified threshold.\b\fs36\par
+
+\pard\sa200\sl276\slmult1\fs28 Asserts:\b0\fs24 The following alert conditions measure the rate of asserts for a MongoDB process, as collected from the MongoDB serverStatus command's asserts document. You can view asserts through cluster monitoring.\par
+\b\fs28 Atlas Search: \b0\fs24 The following alert conditions measure the amount of CPU and memory used by Atlas Search processes. You can view Atlas Search metrics through cluster monitoring.\par
+\b\fs28 Average Execution Time:\b0\fs24 The following alert conditions measure the average execution time of reads, writes, or commands for a MongoDB process, as collected from the MongoDB serverStatus command's opLatencies document. You can view asserts through cluster monitoring.\par
+\b\fs28 Opcounter:\b0\fs24 The following alert conditions measure the rate of database operations on a MongoDB process since the process last started, as collected from the MongoDB serverStatus command's opcounters document. You can view opcounters through cluster monitoring.\par
+\b\fs28 Connections: \b0\fs24 The following alert condition measures connections to a MongoDB process, as collected from the MongoDB serverStatus command's connections document. You can view this metric on the Atlas Connections chart, accessed through cluster monitoring.\par
+\b\fs28 Queues: \b0\fs24 The following alert conditions measure operations waiting on locks, as collected from the MongoDB serverStatus command's globalLock document. You can view these metrics on the Atlas Queues chart, accessed through cluster monitoring.\par
+\b\fs28 Page Faults: \b0\fs24 The following alert condition measures the rate of page faults for a MongoDB process, as collected from the MongoDB serverStatus command's extra_info.page_faults field.\par
+\b\fs28 Cursors: \b0\fs24 The following alert conditions measure the number of cursors for a MongoDB process, as collected from the MongoDB serverStatus command's metrics.cursor document. You can view these metrics on the Atlas Cursors chart, accessed through cluster monitoring.\par
+\b\fs28 Network:\b0\fs24 The following alert conditions measure throughput for MongoDB process, as collected from the MongoDB serverStatus command's network document. You can view these metrics on a host's Network chart, accessed through cluster monitoring.\par
+\b\fs28 System and Disk Alerts\par
+Opcounter - Repl:\b0\fs24 The following alert conditions measure the rate of database operations on MongoDB secondaries, as collected from the MongoDB serverStatus command's opcountersRepl document. You can view these metrics on the Opcounters - Repl chart, accessed through cluster monitoring.\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs36\par
+\ul Configure Alert Settings\par
+
+\pard\sa200\sl276\slmult1\ulnone\b0\fs24 For each organization and project, you can select which conditions trigger alerts and how users are notified.\par
+\b Notification Options: \par
+\b0 When you configure an alert, you select how notifications are sent. You can select multiple notification methods, such as email, text message, or team collaboration tools.\par
+Atlas supports Slack as a notification method. From the organization's Settings menu, click Add to Slack in Slack Settings and log in to your preferred Slack workspace.\par
+Atlas supports configuring all of the following notification methods during alert configuration:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Atlas Organization\par
+{\pntext\f1\'B7\tab}Atlas User\par
+{\pntext\f1\'B7\tab}Email\par
+{\pntext\f1\'B7\tab}SMS\par
+{\pntext\f1\'B7\tab}PagerDuty\par
+{\pntext\f1\'B7\tab}Flowdock\par
+{\pntext\f1\'B7\tab}Datadog\par
+{\pntext\f1\'B7\tab}VictorOps\par
+{\pntext\f1\'B7\tab}Opsgenie\par
+{\pntext\f1\'B7\tab}Microsoft Teams\fs22\par
+
+\pard\sa200\sl276\slmult1\fs24\par
+\ul\b\fs28 Organization Alerts\par
+\ulnone\fs24 Required Privileges : \b0 To manage all organization alerts, you must have the Organization Owner role for the organization.\par
+\b Default Alert Settings: \b0 Atlas provides no default alerts for organizations.\par
+\b Configure an Alert:\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Navigate to the Alerts page for your organization:\line\b0 If it is not already displayed, select your desired organization from the            Organizations menu in the navigation bar.Click Alerts in the sidebar.\fs22\par
+{\pntext\f0 ii.\tab}\b Choose whether to create a new alert setting or clone an existing one:\line To create a new alert:\line\b0 Click Add Alert.\b\line To clone an existing alert setting:\line\b0 Click the Alert Settings tab.\line Locate the alert setting you want to clone.\line Click  then Clone in that alert setting's row.\par
+{\pntext\f0 iii.\tab}\b Choose the Target:\b0\line Click User or Billing under Select a Target.\par
+{\pntext\f0 iv.\tab}\b Choose the Condition.\b0\par
+{\pntext\f0 v.\tab}\b Select the Notification Method.\par
+{\pntext\f0 vi.\tab}Click Save\b0\par
+
+\pard\sa200\sl276\slmult1\b\par
+\ul\fs28 Project Alerts\par
+\ulnone\fs24 Required Privileges : \b0 To manage project alerts, you must have the Project Owner role for the project.\par
+\b Default Alert Settings: \b0 Atlas provides the following default alerts for a new project:\par
+
+\pard 
+{\pntext\f0 a.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcltr{\pntxta.}}
+\fi-360\li1440\sa200\sl276\slmult1 Cluster is missing an active mongos\par
+{\pntext\f0 b.\tab}Connections % of configured limit is\par
+{\pntext\f0 c.\tab}Credit card is about to expire\par
+{\pntext\f0 d.\tab}Disk I/O % utilization on Data Partition is\par
+{\pntext\f0 e.\tab}Disk space % used on Data Partition is\par
+{\pntext\f0 f.\tab}Host has index suggestions\par
+{\pntext\f0 g.\tab}Query Targeting: Scanned Objects / Returned\par
+{\pntext\f0 h.\tab}Replica set has no primary\par
+{\pntext\f0 i.\tab}Replication Oplog Window is\par
+{\pntext\f0 j.\tab}System: CPU (Steal) % is\par
+{\pntext\f0 k.\tab}System: CPU (User) % is\par
+{\pntext\f0 l.\tab}User joined the project\par
+
+\pard\sa200\sl276\slmult1\b Configure an Alert:\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Navigate to the Alerts page for your organization:\line\line\b0 If it is not already displayed, select the organization that contains your desired project from the  Organizations menu in the navigation bar.\line\line If it is not already displayed, select your desired project from the Projects menu in the navigation bar.\line\line Click the  Project Alerts icon in the navigation bar, or click Alerts in the sidebar.\fs22\par
+{\pntext\f0 ii.\tab}\b Choose whether to create a new alert setting or clone an existing one:\line\line To create a new alert:\line\b0 Click Add.\line Select New Alert.\b\line\line To clone an existing alert setting:\line\b0 Click the Alert Settings tab.\line Locate the alert setting you want to clone.\line Click  then Clone in that alert setting's row.\par
+{\pntext\f0 iii.\tab}\b Select the condition that triggers the alert:\b0\line In the Alert if section, select the target component and the condition. To learn more about alert conditions, see Review Alert Conditions.\par
+{\pntext\f0 iv.\tab}\b Apply the alert only to specific targets. (Optional).\b0\line\line If the options in the For section are available, you can optionally filter the alert to apply only to a subset of the targets.\line\line The matches field can use regular expressions.\line\b\par
+{\pntext\f0 v.\tab}Select the alert recipients and delivery methods.\par
+{\pntext\f0 vi.\tab}Click Save\b0 .\par
+
+\pard\sa200\sl276\slmult1\par
+{{\field{\*\fldinst{HYPERLINK https://www.mongodb.com/docs/atlas/configure-alerts/ }}{\fldrslt{https://www.mongodb.com/docs/atlas/configure-alerts/\ul0\cf0}}}}\f0\fs22\par
+\par
+}
+ 
