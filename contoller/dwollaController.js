@@ -1,7 +1,7 @@
 var Client = require("dwolla-v2").Client;
 
-const appKey = "";
-const appSecret = "";
+const appKey = "2KqnvEWkCJynFCPMnEBc92P1cH3FWI3ykoDwE9gAHohkOi6Ezq";
+const appSecret = "eOU8N4GydaI2H5rmSNZPPVRpitJxygy4Yrk7YpJKRo0KiTo45P";
 const dwolla = new Client({
     key: appKey,
     secret: appSecret,
